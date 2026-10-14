@@ -145,23 +145,6 @@
   </header>
 
   <nav aria-label="Links">
-    <a class="link event" href="https://ultima-volta.capitalupgrade.com.br/" target="_blank" rel="noopener">
-      <div class="event-top">
-        <span class="tag"><i></i>Novo evento, 06 de outubro</span>
-        <span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
-      </div>
-      <div>
-        <strong>Última Volta 2026</strong>
-        <span>Imersão empresarial em Sorocaba. Garanta sua vaga</span>
-      </div>
-      <div class="countdown" id="countdown" aria-label="Contagem regressiva para o evento">
-        <div><b data-u="d">00</b><small>dias</small></div>
-        <div><b data-u="h">00</b><small>horas</small></div>
-        <div><b data-u="m">00</b><small>min</small></div>
-        <div><b data-u="s">00</b><small>seg</small></div>
-      </div>
-    </a>
-
     <a class="link" href="https://wa.me/message/PPNNBLMWMNJEN1" target="_blank" rel="noopener"><div class="txt"><strong>Esteira para mulheres!</strong><span>Fale comigo pelo WhatsApp</span></div><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
     <p class="group-title">Capital Upgrade Campinas</p>
     <a class="link" href="https://caupcampinas.com.br/gestao-aplicada" target="_blank" rel="noopener"><div class="txt"><strong>Gestão Aplicada</strong><span>Gestão, liderança e execução com método</span></div><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
@@ -182,23 +165,6 @@
 <script>
   // Entrada em sequência
   document.querySelectorAll('nav > *, .socials').forEach((el, n) => { el.classList.add('reveal'); el.style.setProperty('--i', n + 3); });
-
-  // Contagem regressiva
-  (function () {
-    const box = document.getElementById('countdown');
-    const alvo = new Date('2026-10-06T07:30:00-03:00').getTime();
-    const el = u => box.querySelector('[data-u="' + u + '"]');
-    const pad = v => String(v).padStart(2, '0');
-    function tick() {
-      const d = Math.max(0, alvo - Date.now());
-      if (d === 0) { box.innerHTML = '<div style="grid-column:1/-1"><b>É hoje!</b><small>Última Volta em andamento</small></div>'; clearInterval(t); return; }
-      el('d').textContent = pad(Math.floor(d / 864e5));
-      el('h').textContent = pad(Math.floor(d / 36e5) % 24);
-      el('m').textContent = pad(Math.floor(d / 6e4) % 60);
-      el('s').textContent = pad(Math.floor(d / 1e3) % 60);
-    }
-    const t = setInterval(tick, 1000); tick();
-  })();
 
 </script>
 </body>
